@@ -11,7 +11,11 @@ gamma_vec=linspace(-3,1,800);
 
 % Save outputs in the replication-package output directory.
 this_file = mfilename('fullpath');
-code_dir = fileparts(this_file);
+if isempty(this_file)
+    code_dir = pwd;
+else
+    code_dir = fileparts(this_file);
+end
 outdir = fullfile(code_dir,'..','output','figures');
 if ~exist(outdir, 'dir')
     mkdir(outdir);
@@ -86,7 +90,8 @@ for i=1:length(gamma_vec)
         end
     end
 
-
+% Common axis ticks/limits to match draft formatting across panels.
+x_ticks = 0:0.5:4;
 
 f1 = figure('Color','w','Units','inches','Position',[1 1 5 4]);
 imagesc([min(psi_vec) max(psi_vec)], [max(gamma_vec) min(gamma_vec)], asym);
@@ -96,27 +101,58 @@ xlabel('\psi','FontSize',20);
 ylabel('\gamma','FontSize',20);
 ytnew = get(gca, 'YTick');
 ytlbl = linspace(max(gamma_vec), min(gamma_vec), numel(ytnew));
-set(gca, 'YTick', ytnew, 'YTickLabel', ytlbl);
+set(gca, 'YTick', ytnew, 'YTickLabel', ytlbl, 'XLim',[0 4], 'XTick',x_ticks);
+%set(gca,'XLim',[0 4],'YLim',[-3 1], ...
+%   ,'YTick',y_ticks);
 set(gca, 'FontSize', 13, 'LineWidth', 1.0, 'Box', 'on');
 exportgraphics(f1, fullfile(outdir,'figure2_panel_a_region_disagreement.pdf'), ...
     'ContentType', 'vector');
 
+% Common axis ticks/limits to match draft formatting across panels.
+x_ticks = 0.5:0.5:4;
+y_ticks = -3:0.5:1;
+
 f2 = figure('Color','w','Units','inches','Position',[1 1 5 4]);
-contourf(psi_vec, gamma_vec, CGa, [ -0.04 0 0.1 0.18 0.3 0.43 ], 'ShowText', 'on');
+[C, h] = contourf(psi_vec, gamma_vec, CGa, [ -0.04 0 0.1 0.18 0.3 0.43 ]);
+
+% 2. Use clabel to control the spacing between identical labels (measured in points)
+clabel(C, h, 'LabelSpacing', 160); % Increase 300 if the duplicate persists
 colorbar;
 xlabel('\psi','FontSize',20);
 ylabel('\gamma','FontSize',20);
+set(gca,'XLim',[0 4],'YLim',[-3 1], ...
+    'XTick',x_ticks,'YTick',y_ticks);
 set(gca, 'FontSize', 13, 'LineWidth', 1.0, 'Box', 'on');
 exportgraphics(f2, fullfile(outdir,'figure2_panel_b_cga_contour.pdf'), ...
     'ContentType', 'vector');
 
 f3 = figure('Color','w','Units','inches','Position',[1 1 5 4]);
-contourf(psi_vec, gamma_vec, CGi, [ -0.13 -0.08 -0.04 0 0.03 0.06 ], 'ShowText', 'on');
+[C, h] = contourf(psi_vec, gamma_vec, CGi, [ -0.13 -0.08 -0.04 0 0.03 0.06 ]);
+clabel(C, h, 'LabelSpacing', 160); % Increase 300 if the duplicate persists
+
 colorbar;
 xlabel('\psi','FontSize',20);
 ylabel('\gamma','FontSize',20);
+set(gca,'XLim',[0 4],'YLim',[-3 1], ...
+    'XTick',x_ticks,'YTick',y_ticks);
 set(gca, 'FontSize', 13, 'LineWidth', 1.0, 'Box', 'on');
 exportgraphics(f3, fullfile(outdir,'figure2_panel_c_cgi_contour.pdf'), ...
     'ContentType', 'vector');
 
-
+% 
+% f4 = figure('Color','w','Units','inches','Position',[1 1 5 4]);
+% 
+% % 1. Capture the contour matrix (C) and handle (h), and REMOVE 'ShowText','on'
+% [C, h] = contourf(psi_vec, gamma_vec, CGa, [ -0.04 0 0.1 0.18 0.3 0.43 ]);
+% 
+% % 2. Use clabel to control the spacing between identical labels (measured in points)
+% clabel(C, h, 'LabelSpacing', 160); % Increase 300 if the duplicate persists
+% 
+% colorbar;
+% xlabel('\psi','FontSize',20);
+% ylabel('\gamma','FontSize',20);
+% set(gca,'XLim',[0 4],'YLim',[-3 1], ...
+%     'XTick',x_ticks,'YTick',y_ticks);
+% set(gca, 'FontSize', 13, 'LineWidth', 1.0, 'Box', 'on');
+% exportgraphics(f4, fullfile(outdir,'figure2_panel_b_cga_contour1.pdf'), ...
+%     'ContentType', 'vector');

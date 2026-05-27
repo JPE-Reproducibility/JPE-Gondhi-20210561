@@ -1,9 +1,13 @@
-# Replication Package: Strategic Wishful Thinking: Implications for Forecasts
+# Data and Code for: Strategic Wishful Thinking: Implications for Forecasts
 
 Authors: Snehal Banerjee, Jesse Davis, Naveen Gondhi  
+Affiliations:  
+- Snehal Banerjee — University of California, San Diego  
+- Jesse Davis — University of North Carolina at Chapel Hill  
+- Naveen Gondhi — INSEAD  
 Paper date: April 27, 2026  
 Journal: *Journal of Political Economy* (accepted)  
-Corresponding author: Naveen Gondhi (naveen.gondhi@insead.edu)
+Corresponding author: Naveen Gondhi
 
 ## Statement of Rights
 
@@ -35,13 +39,18 @@ Restrictions and exemptions:
 
 ## Computational Requirements
 
-- Operating system(s): Windows, macOS, or Linux
-- Primary language(s): MATLAB
-- Software versions: MATLAB (recommended R2021b or later)
-- Required packages/libraries and versions: No external MATLAB toolboxes required beyond standard plotting and numerical functions
-- Hardware needs (RAM/CPU/GPU): Standard desktop/laptop CPU; no GPU required
+Replication package was prepared and tested on the following machine:
+
+- Operating system: Microsoft Windows 10 Enterprise, 64-bit (version 10.0.19045)
+- CPU: Intel(R) Core(TM) i7-6700T CPU @ 2.80GHz (4 physical cores, 8 logical processors)
+- RAM: 34,247,561,216 bytes installed (about 34.25 GB, approximately 31.9 GiB usable)
+- Storage requirement: at least 200 MB of free disk space for scripts, generated figures, and logs
+- MATLAB executable: `C:\Program Files\MATLAB\R2026a\bin\matlab.exe`
+- MATLAB release used for checks: R2026a
+- Required MATLAB toolboxes: none beyond standard MATLAB numerical and plotting functionality
+- GPU requirement: none
 - Expected runtime:
-  - Full run from source code to all outputs: approximately 2-10 minutes on a typical modern laptop
+  - Full run from source code to all outputs: approximately 2-10 minutes on the machine listed above
   - Quick/test run (if provided): not applicable
 
 ## Reproducibility Instructions
@@ -53,10 +62,17 @@ The package should run with minimal human intervention and produce all reproduci
 3. Verify that all outputs are generated in `output/figures/`.
 4. Cross-check outputs against `output/output_map.csv`.
 
+Random seed for reproducibility:
+
+- A fixed MATLAB random seed is set in `code/run_all.m` before any figure script is executed.
+- The exact command is `rng(20260525, 'twister')`.
+- To replicate the journal-checked output exactly, do not change this value.
+- If a different seed is needed for robustness checks, change the value in `code/run_all.m` and rerun all scripts.
+
 Important:
 
 - Use relative paths in scripts.
-- Set random seeds for all simulations/Monte Carlo components.
+- Random seed is set in `code/run_all.m` using `rng(20260525, 'twister')`.
 - Ensure output files are written to disk (not only shown in console).
 - Remove stale outputs before final replication test.
 
@@ -88,6 +104,12 @@ If checks are partial because of computational burden, document:
 ## Ethics and Pre-registration (If Applicable)
 
 - Not applicable: this paper does not involve human-subject data collection or experimental participants.
+
+## PII Verification
+
+- This package contains no participant-level or confidential personal data.
+- The only personal identifiers are author names already present in the manuscript metadata.
+- No personal file-system paths, user account names, phone numbers, or private contact information are included in the replication scripts and output files.
 
 ## Final Submission Notes for JPE Dataverse
 

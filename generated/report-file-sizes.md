@@ -4,7 +4,7 @@
 
 The package contains:
 
-* 18 files
+* 20 files
 
 * 1 Duplicate files
 * No files larger than 100MB
@@ -13,21 +13,23 @@ The package contains:
 
 | Filename | Size (MB) | Checksum (MD5) |
 |:---------|----------:|:--------------|
-| /JPE_data_replication/output/figures/.gitkeep | 0.0 | ba8ab5a0280b953aa97435ff8946cbcbb2755a27 |
-| /JPE_data_replication/output/logs/.gitkeep | 0.0 | ba8ab5a0280b953aa97435ff8946cbcbb2755a27 |
-| /JPE_data_replication/code/run_all.m | 0.0 | a564c9a95fd00026875808b977f3fa7b26760f1b |
-| /JPE_data_replication/output/README.md | 0.0 | 5ab6f5a728179bdb26437cf8d4a32a92c2f94029 |
-| /JPE_data_replication/make_jpe_package.ps1 | 0.0 | 56ca6963037ad6f280781b95fca5f468b09126eb |
-| /JPE_data_replication/code/README.md | 0.0 | 2af8db42c67f13e59a3d69efff06a1ea6c1fb342 |
-| /JPE_data_replication/LICENSE.txt | 0.0 | b133186889c8235dc4094bd194910a47acf7af8c |
-| /JPE_data_replication/output/output_map.csv | 0.0 | 519fc80ebaecc92ba38ed56cd71202bc965aab36 |
-| /JPE_data_replication/REPLICATION_CHECKLIST.md | 0.0 | 5646ad1b35c387ccdba81de3577ed0fb257110c9 |
-| /JPE_data_replication/code/Figure1.m | 0.0 | 311420982b491d60b861ea7bfd3c0cd6c5ffe4d4 |
-| /JPE_data_replication/README.md | 0.0 | 8ecb192da0ef645b5da194c02f475343aff91123 |
-| /JPE_data_replication/code/Figure2.m | 0.01 | a00c6b59d3e3d0b91d9bf29f815b26bf32ae6812 |
-| /JPE_data_replication/output/figures/figure2_panel_a_region_disagreement.pdf | 0.02 | 553f95332214a5352e48ba4bf9e7a4dbc69bc551 |
-| /JPE_data_replication/output/figures/figure1_panel_b_B_equals_Bunderline.pdf | 0.02 | 32d446b600f5028e171c59c0ef429090e333338c |
-| /JPE_data_replication/output/figures/figure1_panel_c_mixed_equilibrium.pdf | 0.02 | 20a2f8c655ac79159807538d83d5f44822cbced7 |
-| /JPE_data_replication/output/figures/figure1_panel_a_B_equals_Bbar.pdf | 0.02 | 9dedb7de46720a28e4838d024fa847a5d1de376f |
-| /JPE_data_replication/output/figures/figure2_panel_c_cgi_contour.pdf | 0.11 | 433dcfbc7b370cf032aa319530eb652c0c194825 |
-| /JPE_data_replication/output/figures/figure2_panel_b_cga_contour.pdf | 0.12 | 62c4a0d351a57605f2e434c796e8bae7c8b224e4 |
+| /output/figures/.gitkeep | 0.0 | ba8ab5a0280b953aa97435ff8946cbcbb2755a27 |
+| /output/logs/.gitkeep | 0.0 | ba8ab5a0280b953aa97435ff8946cbcbb2755a27 |
+| /output/README.md | 0.0 | 5ab6f5a728179bdb26437cf8d4a32a92c2f94029 |
+| /make_jpe_package.ps1 | 0.0 | 56ca6963037ad6f280781b95fca5f468b09126eb |
+| /code/README.md | 0.0 | 2af8db42c67f13e59a3d69efff06a1ea6c1fb342 |
+| /code/run_all.m | 0.0 | 6d847422dec8446c16d3d5cff773497bfb8fa163 |
+| /LICENSE.txt | 0.0 | b133186889c8235dc4094bd194910a47acf7af8c |
+| /output/output_map.csv | 0.0 | 519fc80ebaecc92ba38ed56cd71202bc965aab36 |
+| /REPLICATION_CHECKLIST.md | 0.0 | 5646ad1b35c387ccdba81de3577ed0fb257110c9 |
+| /code/Figure1.m | 0.0 | 21f88c1d26c9da77c4029e1fd59616e211e06d94 |
+| /README.md | 0.0 | 59e5f817b49598d7c8fdfd700f6ee7e7182ab912 |
+| /code/Figure2.m | 0.01 | db69da47e51842dbf3d28a5fdb675504e4e0eb4a |
+| /output/figures/figure2_panel_a_region_disagreement.pdf | 0.02 | 3940d314064fddb2878c1cfaaf163a2ee8919f50 |
+| /output/figures/figure1_panel_b_B_equals_Bunderline.pdf | 0.02 | 43ace470514b1917c1be95d13d2470f9fbf93735 |
+| /output/figures/figure1_panel_c_mixed_equilibrium.pdf | 0.02 | c5fe2b22e34b2325afb04822bd873bb56696e615 |
+| /output/figures/figure1_panel_a_B_equals_Bbar.pdf | 0.02 | bbd46ce8ab181be2889f4bd48b449d2223f2a578 |
+| /output/figures/figure2_panel_c_cgi_contour.pdf | 0.11 | 3a1b43dfc5b95b2d363c78f8a8189a702ecd86d7 |
+| /output/figures/figure2_panel_b_cga_contour.pdf | 0.12 | f207e74a21b9a3b8bf4123f697a3c5e3b23d4256 |
+| /JPE_accepted_paper_Online_Appendix.pdf | 0.29 | efdc89b1d414f4e0bf32afc2495b67334b88b85e |
+| /JPE_accepted_paper_main.pdf | 0.73 | 4212960f22b105189de44d63865ecad7a2b011ba |

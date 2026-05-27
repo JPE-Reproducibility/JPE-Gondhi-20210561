@@ -15,7 +15,11 @@ delta_eta_vec=linspace(deltal,deltah,1000);
 
 % Save outputs in the replication-package output directory.
 this_file = mfilename('fullpath');
-code_dir = fileparts(this_file);
+if isempty(this_file)
+    code_dir = pwd;
+else
+    code_dir = fileparts(this_file);
+end
 outdir = fullfile(code_dir,'..','output','figures');
 if ~exist(outdir, 'dir')
     mkdir(outdir);

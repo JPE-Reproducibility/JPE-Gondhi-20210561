@@ -6,7 +6,7 @@
 - Data files with PII indicators: 0
 - Variables flagged in data: 0
 - Code files with PII references: 3
-- PII references in code: 3
+- PII references in code: 4
 
 ### Summary of Flagged Files
 
@@ -14,6 +14,6 @@
 |-----------|------|----------------------|----------------|
 | Code | `Figure1.m` | 1 | name |
 | Code | `Figure2.m` | 1 | name |
-| Code | `run_all.m` | 1 | name |
+| Code | `run_all.m` | 2 | lat, name |
 
 *See [Appendix](report-pii-appendix.md) for detailed listing of all flagged instances.*
